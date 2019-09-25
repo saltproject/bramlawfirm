@@ -675,12 +675,11 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 800px) {
   .services1  {
- position: relative;
-  padding: 15px;
-  margin-left: 25px;
-  margin-bottom: 60px;
+  position: relative;
+  padding: 5px;
+  margin-bottom: 80px;
   border: none;
   width: 600px;
 }
@@ -702,7 +701,7 @@ h1, h2, h3, h4, h5, h6, figure {
   padding: 5px;
   margin-bottom: 80px;
   border: none;
-  width: 300px;
+  width: 450px;
 }
 }
 
