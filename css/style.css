@@ -588,7 +588,16 @@ h1, h2, h3, h4, h5, h6, figure {
   border: none;
 }
 
-
+@media screen and (min-width: 200px) {
+  .services1  {
+  position: relative;
+  padding: 15px;
+  margin-left: 25px;
+  margin-bottom: 60px;
+  border: none;
+  width: 285px;
+}
+}
 
 @media screen and (min-width: 360px) {
   .services1  {
@@ -623,11 +632,55 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 }
 
+@media screen and (min-width: 460px) {
+  .services1  {
+  position: relative;
+  padding: 15px;
+  margin-left: 25px;
+  margin-bottom: 60px;
+  border: none;
+  width: 490px;
+}
+}
+
+@media screen and (min-width: 500px) {
+  .services1  {
+  position: relative;
+  padding: 15px;
+  margin-left: 25px;
+  margin-bottom: 60px;
+  border: none;
+  width: 500px;
+}
+}
+
+@media screen and (min-width: 600px) {
+  .services1  {
+  position: relative;
+  padding: 15px;
+  margin-left: 25px;
+  margin-bottom: 60px;
+  border: none;
+  width: 600px;
+}
+}
+
 @media screen and (min-width: 768px) {
   .services1  {
   position: relative;
   padding: 5px;
   margin-bottom: 80px;
+  border: none;
+  width: 600px;
+}
+}
+
+@media screen and (min-width: 900px) {
+  .services1  {
+ position: relative;
+  padding: 15px;
+  margin-left: 25px;
+  margin-bottom: 60px;
   border: none;
   width: 600px;
 }
@@ -649,7 +702,7 @@ h1, h2, h3, h4, h5, h6, figure {
   padding: 5px;
   margin-bottom: 80px;
   border: none;
-  width: 450px;
+  width: 300px;
 }
 }
 
