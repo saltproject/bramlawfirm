@@ -74,8 +74,8 @@
       }else if (isset($_GET['pemantauan-produksi'])){
          include "../pages/pemantauan_produksi/index.php";
 
-      }else if (isset($_GET['produk'])){
-         include "../pages/produk/index.php";
+      }else if (isset($_GET['artikel'])){
+         include "../pages/admin/edit_artikel/index.php";
 
       }else if (isset($_GET['order-produk'])){
          include "../pages/order/index.php";
@@ -123,8 +123,8 @@
       }else if (isset($_GET['id_produk'])){
          include "produk/edit.php";
 
-      }else if (isset($_GET['tambah-komposisi'])){
-         include "komposisi_produk/add.php";
+      }else if (isset($_GET['tambah-artikel'])){
+         include "edit_artikel/add.php";
       }else if (isset($_GET['komposisi'])){
          include "komposisi_produk/edit.php";
 

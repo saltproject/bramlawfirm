@@ -10,6 +10,12 @@
                             <span>Home</span>
                         </a>
                     <li>
+                        <a href="index.php?artikel">
+                            <i class="material-icons">call_to_action</i>
+                            <span>Update Artikel</span>
+                        </a>
+                    </li>
+                    <li>
                         <a href="../controller/logout.php">
                             <i class="material-icons">remove_circle</i>
                             <span>Keluar</span>

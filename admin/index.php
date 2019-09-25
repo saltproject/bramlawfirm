@@ -83,12 +83,12 @@ if(isset ($_GET["Notif"]) && !empty ($_GET["Notif"])){
                             <button class="btn btn-block btn-lg bg-gradient waves-effect" type="submit">MASUK</button>
                         </div>
                     </div>
-                    <div class="row m-t-15 m-b--20">
-                        <div class="col-xs-6 align-left">
+                    <div class="col-xs-12">
+                        <div class="col-xs-6">
                             <a href="pages/lupa_password/index.php">Lupa Password ?</a>
                         </div>
-                        <div class="col-xs-6 align-left">
-                            <a href="../index.html">Kembali ke Home</a>
+                        <div class="col-xs-6">
+                            <a href="../index.html">Kembali ke Home </a>
                         </div>
                     </div>
                 </form>
