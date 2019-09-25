@@ -103,30 +103,33 @@ h1, h2, h3, h4, h5, h6, figure {
   padding: 5px 5px;
   color: #000;
 }
+
 @media screen and (max-width: 768px) {
   .fh5co-nav .menu-1 {
     display: none;
   }
 }
+
 .logo {
   margin-bottom: -55px; 
   margin-top: -66px; 
-  margin-left: 75px;
+  margin-left: 35px;
+  height: 70px;
+  width: 200px;
 }
-
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .logo {
-    margin-left: 125px;
-    height: 20;
-    width: 60;
+    margin-left: -29px;
   }
 }
-
-@media screen and (max-width: 1280px) {
+@media screen and (min-width: 991px) {
   .logo {
-    margin-left: -30px;
-    height: 20;
-    width: 20;
+    margin-left: -29px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .logo {
+    margin-left: -29px;
   }
 }
 .fh5co-nav ul {
@@ -572,26 +575,91 @@ h1, h2, h3, h4, h5, h6, figure {
 
 .services1 {
   position: relative;
-  padding: 30px;
+  padding: auto;
   margin-bottom: 60px;
   border: none;
+  width: 600px;
 }
 
 .services1 img {
   position: relative;
-  padding: 30px;
+  padding: 10px;
   margin-bottom: 60px;
   border: none;
 }
 
-@media screen and (max-width: 1280px) {
-  .services1 img {
+
+
+@media screen and (min-width: 360px) {
+  .services1  {
   position: relative;
-  padding: 30px;
-  margin-right: -23px;
+  padding: 15px;
+  margin-left: 25px;
   margin-bottom: 60px;
   border: none;
-  width: 900px;
+  width: 340px;
+}
+}
+
+@media screen and (min-width: 375px) {
+  .services1  {
+  position: relative;
+  padding: 15px;
+  margin-left: 25px;
+  margin-bottom: 60px;
+  border: none;
+  width: 350px;
+}
+}
+
+@media screen and (min-width: 400px) {
+  .services1  {
+  position: relative;
+  padding: 15px;
+  margin-left: 25px;
+  margin-bottom: 60px;
+  border: none;
+  width: 380px;
+}
+}
+
+@media screen and (min-width: 768px) {
+  .services1  {
+  position: relative;
+  padding: 5px;
+  margin-bottom: 80px;
+  border: none;
+  width: 600px;
+}
+}
+
+@media screen and (min-width: 991px) {
+  .services1  {
+  position: relative;
+  padding: 5px;
+  margin-bottom: 80px;
+  border: none;
+  width: 300px;
+}
+}
+
+@media screen and (min-width: 1000px) {
+  .services1  {
+  position: relative;
+  padding: 5px;
+  margin-bottom: 80px;
+  border: none;
+  width: 450px;
+}
+}
+
+@media screen and (min-width: 1280px) {
+  .services1  {
+  position: relative;
+  padding: auto;
+  margin-bottom: 60px;
+  border: none;
+  width: 400px;
 }
 }
 
