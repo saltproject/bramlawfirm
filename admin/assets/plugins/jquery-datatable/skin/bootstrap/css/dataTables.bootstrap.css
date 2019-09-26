@@ -1,7 +1,7 @@
 table.dataTable {
   clear: both;
-  margin-top: 3px !important;
-  margin-bottom: 3px !important;
+  margin-top: 6px !important;
+  margin-bottom: 6px !important;
   max-width: none !important;
 }
 table.dataTable td,
@@ -53,13 +53,7 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
 
 table.dataTable thead > tr > th,
 table.dataTable thead > tr > td {
-  padding-right: 5px;
-  font-size: 12px;
-}
-table.dataTable tbody > tr > th,
-table.dataTable tbody > tr > td {
-  padding-right: 5px;
-  font-size: 12px;
+  padding-right: 30px;
 }
 table.dataTable thead > tr > th:active,
 table.dataTable thead > tr > td:active {

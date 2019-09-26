@@ -1,2 +1,0 @@
-# adminsap
-Admin CV. SAP

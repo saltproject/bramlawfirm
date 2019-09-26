@@ -1,6 +1,6 @@
 ﻿<?php
 session_start();
-include "config/koneksi.php";
+include "config/connection.php";
 
 //Error Notifikasi
 $Err = "";
@@ -40,26 +40,42 @@ if(isset ($_GET["Notif"]) && !empty ($_GET["Notif"])){
     }
 }
 ?>
-<!DOCTYPE html>
-<html>
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Admin Panel</title>
-    <?php 
-        include "view/login/css.php";
-    ?>
+    <title>Sign In | Admin Panel</title>
+    <!-- Favicon-->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- Font Face -->
+    <link href="assets/css/font-face.css" rel="stylesheet" media="all">
+
+    <!-- Google Fonts -->
+    <link href="assets/css/material-icons.css" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap Core Css -->
+    <link href="assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Waves Effect Css -->
+    <link href="assets/plugins/node-waves/waves.css" rel="stylesheet" />
+
+    <!-- Animation Css -->
+    <link href="assets/plugins/animate-css/animate.css" rel="stylesheet" />
+
+    <!-- Custom Css -->
+    <link href="assets/css/style.css" rel="stylesheet">
 </head>
+
 <body class="login-page">
     <div class="login-box">
         <div class="logo">
-           <a href="javascript:void(0);"><img src="assets/images/cloudroot.jpg"></a>
+            <a href="javascript:void(0);"><b>Admin</b>Panel</a>
+            <small>SaltProject - Admin Panel</small>
         </div>
-        <div class="card-login">
+        <div class="card">
             <div class="body">
                 <form action="controller/verify.php" id="sign_in" method="POST">
+                    <div class="msg">Sign in to start your session</div>
                     <div class="msg animated bounceIn"><?php echo $Err ?></div>
                     <div class="input-group">
                         <span class="input-group-addon">
@@ -77,27 +93,43 @@ if(isset ($_GET["Notif"]) && !empty ($_GET["Notif"])){
                             <input type="password" class="form-control" name="password" placeholder="Password" required>
                         </div>
                     </div>
-                    
                     <div class="row">
-                        <div class="col-xs-12">
-                            <button class="btn btn-block btn-lg bg-gradient waves-effect" type="submit">MASUK</button>
+                        <div class="col-xs-8 p-t-5">
+                            <input type="checkbox" name="rememberme" id="rememberme" class="filled-in chk-col-cyan">
+                            <label for="rememberme">Remember Me</label>
+                        </div>
+                        <div class="col-xs-4">
+                            <button class="btn btn-block bg-cyan waves-effect" type="submit">SIGN IN</button>
                         </div>
                     </div>
-                    <div class="col-xs-12">
+                    <div class="row m-t-15 m-b--20">
                         <div class="col-xs-6">
-                            <a href="pages/lupa_password/index.php">Lupa Password ?</a>
+                            <a href="forgot-password.html">Register Now!</a>
                         </div>
-                        <div class="col-xs-6">
-                            <a href="../index.html">Kembali ke Home </a>
+                        <div class="col-xs-6 align-right">
+                            <a href="../index.html">< Back to Webpage</a>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-<?php 
-    include "view/login/js.php"
-?>
+
+    <!-- Jquery Core Js -->
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core Js -->
+    <script src="assets/plugins/bootstrap/js/bootstrap.js"></script>
+
+    <!-- Waves Effect Plugin Js -->
+    <script src="assets/plugins/node-waves/waves.js"></script>
+
+    <!-- Validation Plugin Js -->
+    <script src="assets/plugins/jquery-validation/jquery.validate.js"></script>
+
+    <!-- Custom Js -->
+    <script src="assets/js/admin.js"></script>
+    <script src="assets/js/pages/examples/sign-in.js"></script>
 </body>
 
 </html>
