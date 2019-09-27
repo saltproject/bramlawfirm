@@ -1,12 +1,12 @@
 <?php
-include "../../config/koneksi.php";
+include "../../config/connection.php";
 
-$komposisi = $_GET["komposisi"];
+$id_post = $_GET["id_post"];
 
-if($delete = mysqli_query($konek, "DELETE FROM komposisi WHERE komposisi='$komposisi'")){
-		header("Location: ../../pages/index.php?komposisi-produk");
+if($delete = mysqli_query($connect, "DELETE FROM bramlawfirm_posts WHERE id_post='$id_post'")){
+		header("Location: ../../pages/index.php?post");
 		exit();
 	}
-die ("Terdapat kesalahan : ". mysqli_error($konek));
+die ("Terdapat kesalahan : ". mysqli_error($connect));
 
 ?>

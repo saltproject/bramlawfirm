@@ -796,24 +796,25 @@ include "admin/config/connection.php";
 	</div>
 </section>
 
-	<div id="fh5co-blog" class="fh5co-bg-section">
+<div id="fh5co-blog" class="fh5co-bg-section">
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<h2>Recent Post</h2>
+					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
 				</div>
 			</div>
 			<div class="row">
 							 <?php
 						           include 'admin/config/connection.php';
 						                                                
-						           $querypost = mysqli_query($connect, "SELECT * FROM bramlawfirm_posts ");
+						           $querypost = mysqli_query($connect, "SELECT post_date, post_title, SUBSTRING(post_content,1,200) as post_content FROM bramlawfirm_posts ");
 						           if($querypost == false){
 						           die ("Terdapat Kesalahan : ". mysqli_error($connect));
 						           }
 						           while ($post = mysqli_fetch_array($querypost)){
 						          echo "
-									<div class='col-lg-4 col-md-4'>
+								<div class='col-lg-4 col-md-4'>
 										<div class='fh5co-blog animate-box'>
 											<a href='#'><img class='img-responsive' src='images/project-4.jpg' alt='></a>
 											<div class='blog-text'>
@@ -823,20 +824,14 @@ include "admin/config/connection.php";
 						          <p>$post[post_content]</p>
 						          <a href='#'' class='btn btn-primary'>Read More</a>
 						          			</div>
-										</div>
-									</div>
-						          ";
+								     </div>
+								</div>";
 						           }                                     
 				            ?>
-			
-							
-							
-							
-							
-							
-						</div> 
-					</div>
-				</div>
+				
+			  </div> 
+		   </div>
+		</div>
 
 	
 <section id="attorneys">
