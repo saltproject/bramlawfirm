@@ -59,7 +59,7 @@
                             </h2>
                             <br>
                             <div class="row clearfix">
-                               <a href="index.php?tambah-artikel"><button type="button" class="btn bg-cyan btn-circle waves-effect waves-circle waves-float" style="margin-left: 10px;">
+                               <a href="index.php?add_post"><button type="button" class="btn bg-cyan btn-circle waves-effect waves-circle waves-float data-toggle="tooltip" data-placement="right" title="Create New Post" style="margin-left: 10px;">
                                     <i class="material-icons">add</i>
                                 </button></a>
                             </div>

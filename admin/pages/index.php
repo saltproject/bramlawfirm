@@ -1,6 +1,7 @@
 ﻿<?php
     session_start();
-    if(isset($_SESSION['id_user']));
+    (isset($_SESSION['id_user']));
+    (isset($_SESSION['name']));
     include "../config/connection.php";
     include "../controller/auth_user.php";
 ?>
@@ -114,8 +115,8 @@
 
       }else if (isset($_GET['post'])){
          include "../pages/post/index.php";
-      }else if (isset($_GET['-'])){
-         include "../pages/post/index.php";
+      }else if (isset($_GET['add_post'])){
+         include "../pages/post/add_post.php";
       }else if (isset($_GET['-'])){
          include "../pages/post/index.php";
       }else{
@@ -208,6 +209,7 @@
     <script src="../assets/js/pages/forms/basic-form-elements.js"></script>
     <script src="../assets/js/pages/forms/advanced-form-elements.js"></script>
     <script src="../assets/js/pages/forms/form-wizard.js"></script>
+    <script src="../assets/js/pages/ui/tooltips-popovers.js"></script>
 
     <!-- Demo Js -->
     <script src="../assets/js/demo.js"></script>
@@ -217,6 +219,17 @@
         selector: 'textarea#editor',
     });
 
+</script>
+<script>
+    $(function () {
+    //Tooltip
+    $('[data-toggle="tooltip"]').tooltip({
+        container: 'body'
+    });
+
+    //Popover
+    $('[data-toggle="popover"]').popover();
+})
 </script>
 <script>
         jQuery(document).ready(function($){

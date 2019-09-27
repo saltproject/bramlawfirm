@@ -1,3 +1,8 @@
+<?php 
+
+include "admin/config/connection.php";
+
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -796,49 +801,43 @@
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<h2>Recent Post</h2>
-					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-lg-4 col-md-4">
-					<div class="fh5co-blog animate-box">
-						<a href="#"><img class="img-responsive" src="images/project-4.jpg" alt=""></a>
-						<div class="blog-text">
-							<span class="posted_on">Nov. 15th</span>
-							<span class="comment"><a href="">21<i class="icon-speech-bubble"></i></a></span>
-							<h3><a href="#">Legal Consultation</a></h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-							<a href="#" class="btn btn-primary">Read More</a>
+							 <?php
+						           include 'admin/config/connection.php';
+						                                                
+						           $querypost = mysqli_query($connect, "SELECT * FROM bramlawfirm_posts ");
+						           if($querypost == false){
+						           die ("Terdapat Kesalahan : ". mysqli_error($connect));
+						           }
+						           while ($post = mysqli_fetch_array($querypost)){
+						          echo "
+									<div class='col-lg-4 col-md-4'>
+										<div class='fh5co-blog animate-box'>
+											<a href='#'><img class='img-responsive' src='images/project-4.jpg' alt='></a>
+											<div class='blog-text'>
+						          <span class='posted_on'>$post[post_date]</span>
+						          <span class='comment'><a href=''>21<i class='icon-speech-bubble'></i></a></span>
+						          <h3><a href='#''>$post[post_title]</a></h3>
+						          <p>$post[post_content]</p>
+						          <a href='#'' class='btn btn-primary'>Read More</a>
+						          			</div>
+										</div>
+									</div>
+						          ";
+						           }                                     
+				            ?>
+			
+							
+							
+							
+							
+							
 						</div> 
 					</div>
 				</div>
-				<div class="col-lg-4 col-md-4">
-					<div class="fh5co-blog animate-box">
-						<a href="#"><img class="img-responsive" src="images/project-2.jpg" alt=""></a>
-						<div class="blog-text">
-							<span class="posted_on">Nov. 15th</span>
-							<span class="comment"><a href="">21<i class="icon-speech-bubble"></i></a></span>
-							<h3><a href="#">Criminal Case</a></h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-							<a href="#" class="btn btn-primary">Read More</a>
-						</div> 
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-4">
-					<div class="fh5co-blog animate-box">
-						<a href="#"><img class="img-responsive" src="images/project-3.jpg" alt=""></a>
-						<div class="blog-text">
-							<span class="posted_on">Nov. 15th</span>
-							<span class="comment"><a href="">21<i class="icon-speech-bubble"></i></a></span>
-							<h3><a href="#">Business Law</a></h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-							<a href="#" class="btn btn-primary">Read More</a>
-						</div> 
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+
 	
 <section id="attorneys">
 	<div id="fh5co-about">

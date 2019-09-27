@@ -107,7 +107,7 @@ if(isset ($_GET["Notif"]) && !empty ($_GET["Notif"])){
                             <a href="forgot-password.html">Register Now!</a>
                         </div>
                         <div class="col-xs-6 align-right">
-                            <a href="../index.html">< Back to Webpage</a>
+                            <a href="../index.php">< Back to Webpage</a>
                         </div>
                     </div>
                 </form>

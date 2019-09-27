@@ -18,17 +18,18 @@ if ($_POST){
 			if (md5($Password, $user["password"])){
 				
 				$_SESSION["id_user"] 			= $user["id_user"];
+				$_SESSION["name"] 			    = $user["name"];
 				$_SESSION["username"] 			= $user["username"];
 				$_SESSION["password"] 			= $user["password"];
 				$_SESSION["access"] 	        = $user["access"];
 				$_SESSION["Login"] 	     	    = true;
 				
 				if ($_SESSION["access"] == 'administrator'){
-					header ("Location: ../pages/index.php?".$_SESSION['id_user']."". ($_SESSION['username'])."");
+					header ("Location: ../pages/index.php?".$_SESSION['id_user']."". ($_SESSION['username'])."". ($_SESSION['name'])."");
 					exit();
 				}
 				else if($_SESSION["access"] == 'user'){
-					header ("Location: ../pages/index.php?".$_SESSION['id_user']."". ($_SESSION['username'])."");
+					header ("Location: ../pages/index.php?".$_SESSION['id_user']."". ($_SESSION['username'])."". ($_SESSION['name'])."");
 					exit();
 				}
 				else{
