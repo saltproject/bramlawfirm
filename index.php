@@ -808,7 +808,7 @@ include "admin/config/connection.php";
 							 <?php
 						           include 'admin/config/connection.php';
 						                                                
-						           $querypost = mysqli_query($connect, "SELECT post_date, post_title, SUBSTRING(post_content,1,200) as post_content FROM bramlawfirm_posts ");
+						           $querypost = mysqli_query($connect, "SELECT post_date, post_title, SUBSTRING(post_content,1,100) as post_content FROM bramlawfirm_posts LIMIT 3 ");
 						           if($querypost == false){
 						           die ("Terdapat Kesalahan : ". mysqli_error($connect));
 						           }
@@ -816,7 +816,7 @@ include "admin/config/connection.php";
 						          echo "
 								<div class='col-lg-4 col-md-4'>
 										<div class='fh5co-blog animate-box'>
-											<a href='#'><img class='img-responsive' src='images/project-4.jpg' alt='></a>
+											<a href='#'><img class='img-responsive' src='images/project-4.jpg' alt=''></a>
 											<div class='blog-text'>
 						          <span class='posted_on'>$post[post_date]</span>
 						          <span class='comment'><a href=''>21<i class='icon-speech-bubble'></i></a></span>
