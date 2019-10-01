@@ -83,8 +83,8 @@
 							<li><a href="index.php#whyus">Our Expertise</a></li>
 							<li><a href="index.php#ourpractice">Practice Area</a></li>
 							<li><a href="index.php#attorneys">Attorneys</a></li>
-							<li><a href="blog.php">Articles</a></li>
-							<li  class="active"><a href="contact.html">Contact</a></li>
+							<li class="active"><a href="blog.php">Articles</a></li>
+							<li><a href="contact.html">Contact</a></li>
 						</ul>
 					</div>
 				</div>
@@ -101,7 +101,7 @@
 		   		<div class="container">
 		   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
 		   				<div class="slider-text-inner desc">
-		   					<h2 class="heading-section">Contact Us</h2>
+		   					<h2 class="heading-section">Blog</h2>
 		   					
 		   				</div>
 		   			</div>
@@ -111,69 +111,35 @@
 	  	</div>
 	</aside>
 
-	<div id="fh5co-contact">
+	<div id="fh5co-blog" class="fh5co-bg-section">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-5 col-md-push-1 animate-box">
-					
-					<div class="fh5co-contact-info">
-						<h3>Contact Information</h3>
-						<ul>
-							<li class="address">Jl. Cikutra No. 278, Kota Bandung, <br> Jawa Barat 40124</li>
-							<li class="phone"><a href="tel:0811221251">0811221251</a></li>
-							<li class="email"><a href="mailto:info@bramlawfirm.com">info@bramlawfirm.com</a></li>
-							<li class="url"><a href="www.bramlawfirm.com">www.bramlawfirm.com</a></li>
-						</ul>
-					</div>
-
-				</div>
-				<div class="col-md-6 animate-box">
-					<h3>Send A Message</h3>
-					<form action="#">
-						<div class="row form-group">
-							<div class="col-md-6">
-								<!-- <label for="fname">First Name</label> -->
-								<input type="text" id="fname" class="form-control" placeholder="Your firstname">
-							</div>
-							<div class="col-md-6">
-								<!-- <label for="lname">Last Name</label> -->
-								<input type="text" id="lname" class="form-control" placeholder="Your lastname">
-							</div>
-						</div>
-
-						<div class="row form-group">
-							<div class="col-md-12">
-								<!-- <label for="email">Email</label> -->
-								<input type="text" id="email" class="form-control" placeholder="Your email address">
-							</div>
-						</div>
-
-						<div class="row form-group">
-							<div class="col-md-12">
-								<!-- <label for="subject">Subject</label> -->
-								<input type="text" id="subject" class="form-control" placeholder="Your subject of this message">
-							</div>
-						</div>
-
-						<div class="row form-group">
-							<div class="col-md-12">
-								<!-- <label for="message">Message</label> -->
-								<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Say something about us"></textarea>
-							</div>
-						</div>
-						<div class="form-group">
-							<input type="submit" value="Send Message" class="btn btn-primary">
-						</div>
-
-					</form>		
-				</div>
+				<?php
+						           include 'admin/config/connection.php';
+						                                                
+						           $querypost = mysqli_query($connect, "SELECT id_post, post_date, post_title, SUBSTRING(post_content,1,100) as post_content FROM bramlawfirm_posts LIMIT 3 ");
+						           if($querypost == false){
+						           die ("Terdapat Kesalahan : ". mysqli_error($connect));
+						           }
+						           while ($post = mysqli_fetch_array($querypost)){
+						          echo "
+								<div class='col-lg-4 col-md-4'>
+										<div class='fh5co-blog animate-box'>
+											<a href='#'><img class='img-responsive' src='images/project-4.jpg' alt=''></a>
+											<div class='blog-text'>
+						          <span class='posted_on'>$post[post_date]</span>
+						          <span class='comment'><a href=''>21<i class='icon-speech-bubble'></i></a></span>
+						          <h3><a href='#''>$post[post_title]</a></h3>
+						          <p>$post[post_content]</p>
+						          <a href='read_post.php?id_read=".$post['id_post']."' class='btn btn-primary'>Read More</a>
+						          			</div>
+								     </div>
+								</div>";
+						           }                                     
+				            ?>
 			</div>
-			
 		</div>
 	</div>
-	<div id="map" class="fh5co-map">
-	  <h3 style="text-align: center;">Find us Here</h3>
-		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d18841.61583819104!2d107.63909720570827!3d-6.895172293216185!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5e41f2c6d1a6d9ee!2sBRAM%26CO%20LAW%20FIRM!5e0!3m2!1sen!2sid!4v1568957948736!5m2!1sen!2sid" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe></div>
 
 
 	<div id="fh5co-started" style="background-image:url(images/img_bg_2.jpg);">
@@ -277,9 +243,6 @@
 	<!-- Magnific Popup -->
 	<script src="js/jquery.magnific-popup.min.js"></script>
 	<script src="js/magnific-popup-options.js"></script>
-	<!-- Google Map -->
-	<script src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d18841.61583819104!2d107.63909720570827!3d-6.895172293216185!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5e41f2c6d1a6d9ee!2sBRAM%26CO%20LAW%20FIRM!5e0!3m2!1sen!2sid!4v1568957948736!5m2!1sen!2sid"></script>
-	<script src="js/google_map.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
 

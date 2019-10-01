@@ -84,11 +84,11 @@ include "admin/config/connection.php";
 					<div class="col-xs-10 text-right menu-1">
 						<ul>
 							<li class="active"><a href="index.html">Home</a></li>
-							<li><a href="index.html#clients">Our Clients</a></li>
-							<li><a href="index.html#whyus">Our Expertise</a></li>
-							<li><a href="index.html#ourpractice">Practice Area</a></li>
-							<li><a href="index.html#attorneys">Attorneys</a></li>
-							<li><a href="blog.html">Articles</a></li>
+							<li><a href="index.php#clients">Our Clients</a></li>
+							<li><a href="index.php#whyus">Our Expertise</a></li>
+							<li><a href="index.php#ourpractice">Practice Area</a></li>
+							<li><a href="index.php#attorneys">Attorneys</a></li>
+							<li><a href="blog.php">Articles</a></li>
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
 					</div>
@@ -822,7 +822,7 @@ include "admin/config/connection.php";
 						          <span class='comment'><a href=''>21<i class='icon-speech-bubble'></i></a></span>
 						          <h3><a href='#''>$post[post_title]</a></h3>
 						          <p>$post[post_content]</p>
-						          <a href='#'' class='btn btn-primary'>Read More</a>
+						          <a href='blog.php' class='btn btn-primary'>Read More</a>
 						          			</div>
 								     </div>
 								</div>";
