@@ -55,7 +55,7 @@
                     <div class="card">
                         <div class="header">
                             <h2>
-                                EXPORTABLE TABLE
+                                TABLE LIST POSTINGAN
                             </h2>
                             <br>
                             <div class="row clearfix">
