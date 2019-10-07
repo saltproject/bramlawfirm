@@ -801,14 +801,14 @@ include "admin/config/connection.php";
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<h2>Recent Post</h2>
-					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+					<p>Our Recent Post.</p>
 				</div>
 			</div>
 			<div class="row">
 							 <?php
 						           include 'admin/config/connection.php';
 						                                                
-						           $querypost = mysqli_query($connect, "SELECT post_date, post_title, SUBSTRING(post_content,1,100) as post_content FROM bramlawfirm_posts LIMIT 3 ");
+						           $querypost = mysqli_query($connect, "SELECT post_date, post_title, SUBSTRING(post_content,1,200) as post_content FROM bramlawfirm_posts ");
 						           if($querypost == false){
 						           die ("Terdapat Kesalahan : ". mysqli_error($connect));
 						           }
@@ -932,12 +932,12 @@ include "admin/config/connection.php";
 				<div class="col-md-3 col-md-push-1">
 					<h4>Navigation</h4>
 					<ul>
-							<li class="active"><a href="index.html">Home</a></li>
-							<li><a href="index.html#clients">Our Clients</a></li>
-							<li><a href="index.html#whyus">Our Expertise</a></li>
-							<li><a href="index.html#ourpractice">Practice Area</a></li>
-							<li><a href="index.html#attorneys">Attorneys</a></li>
-							<li><a href="blog.html">Articles</a></li>
+							<li class="active"><a href="index.php">Home</a></li>
+							<li><a href="index.php#clients">Our Clients</a></li>
+							<li><a href="index.php#whyus">Our Expertise</a></li>
+							<li><a href="index.php#ourpractice">Practice Area</a></li>
+							<li><a href="index.php#attorneys">Attorneys</a></li>
+							<li><a href="blog.php">Articles</a></li>
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
 				</div>
@@ -974,9 +974,7 @@ include "admin/config/connection.php";
 							<li><a href="#"><i class="icon-twitter"></i></a></li>
 							<li><a href="#"><i class="icon-facebook"></i></a></li>
 							<li><a href="#"><i class="icon-linkedin"></i></a></li>
-							<li><a href="#"><i class="icon-dribbble"></i></a></li>
-						</ul>
-					</p>
+							<li><a href="#"><i class="icon-dribbble"></i></
 				</div>
 			</div>
 
@@ -984,7 +982,9 @@ include "admin/config/connection.php";
 	</footer>
 	</div>
 
-	<div class="gototop js-top">
+	<div class="gototop js-top">a></li>
+						</ul>
+					</p>
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
 	

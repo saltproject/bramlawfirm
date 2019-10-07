@@ -93,8 +93,6 @@
     </nav>
     <!-- #Top Bar -->
 
-    
-
     <!-- Menuju Menu Sesuai Hak Akses -->
     <?php 
 
@@ -119,8 +117,6 @@
          include "../pages/post/index.php";
       }else if (isset($_GET['add_post'])){
          include "../pages/post/add_post.php";
-      }else if (isset($_GET['settings'])){
-         include "../pages/settings/settings.php";
       }else if (isset($_GET['-'])){
          include "../pages/post/index.php";
       }else{

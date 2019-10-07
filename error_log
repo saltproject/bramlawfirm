@@ -1,0 +1,2 @@
+[27-Sep-2019 08:55:57 UTC] PHP Warning:  mysqli_connect(): (HY000/2005): Unknown MySQL server host 'cpses_br4j57sxj1@localhost' (2) in /home/bramlawf/public_html/admin/config/connection.php on line 3
+[27-Sep-2019 08:57:01 UTC] PHP Warning:  mysqli_connect(): (42000/1044): Access denied for user 'bramlawf_bramnco'@'localhost' to database 'bramlawf_bramlawfirm' in /home/bramlawf/public_html/admin/config/connection.php on line 3

@@ -2,6 +2,7 @@
                 <thead>
 					<tr>
 						<th>Judul</th>
+						<th>Isi</th>
 						<th>Author</th>
 						<th>Tanggal</th>
 						<th>Status</th>
@@ -18,7 +19,8 @@
 							   $tanggal = $spl["post_date"];
 							echo "
 								<tr>
-									<td><b>$spl[post_title]</b></td>
+									<td>$spl[post_title]</td>
+									<td>$spl[post_content]</td>
 									<td>$spl[post_author]</td>";
 									echo"<td>";echo date("d M Y", strtotime($tanggal)); echo"</td>";
 									if ($_SESSION['id_user'] == 1 ){

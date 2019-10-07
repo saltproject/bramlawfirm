@@ -35,18 +35,12 @@
                     <li>
                         <a href="index.php?post">
                             <i class="material-icons">call_to_action</i>
-                            <span>Post</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="index.php?settings">
-                            <i class="material-icons">settings</i>
-                            <span>Settings</span>
+                            <span>Update Artikel</span>
                         </a>
                     </li>
                         <a href="../controller/logout.php">
                             <i class="material-icons">remove_circle</i>
-                            <span>Log Out</span>
+                            <span>Keluar</span>
                         </a>
                     </li>
                 </ul>

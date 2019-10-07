@@ -84,7 +84,7 @@
 							<li><a href="index.php#ourpractice">Practice Area</a></li>
 							<li><a href="index.php#attorneys">Attorneys</a></li>
 							<li class="active"><a href="blog.php">Articles</a></li>
-							<li><a href="contact.html">Contact</a></li>
+							<li><a href="contact.php">Contact</a></li>
 						</ul>
 					</div>
 				</div>
@@ -117,7 +117,7 @@
 				<?php
 						           include 'admin/config/connection.php';
 						                                                
-						           $querypost = mysqli_query($connect, "SELECT id_post, post_date, post_title, SUBSTRING(post_content,1,100) as post_content FROM bramlawfirm_posts LIMIT 3 ");
+						           $querypost = mysqli_query($connect, "SELECT post_date, post_title, SUBSTRING(post_content,1,100) as post_content FROM bramlawfirm_posts ");
 						           if($querypost == false){
 						           die ("Terdapat Kesalahan : ". mysqli_error($connect));
 						           }
@@ -131,7 +131,7 @@
 						          <span class='comment'><a href=''>21<i class='icon-speech-bubble'></i></a></span>
 						          <h3><a href='#''>$post[post_title]</a></h3>
 						          <p>$post[post_content]</p>
-						          <a href='read_post.php?id_read=".$post['id_post']."' class='btn btn-primary'>Read More</a>
+						          <a href='blog.php' class='btn btn-primary'>Read More</a>
 						          			</div>
 								     </div>
 								</div>";
@@ -169,11 +169,11 @@
 				<div class="col-md-3 col-md-push-1">
 					<h4>Navigation</h4>
 					<ul class="fh5co-footer-links">
-						<li><a href="#clients">Our Clients</a></li>
-						<li><a href="#whyus">Why Choose Us?</a></li>
-						<li><a href="#ourpractice">Practice Area</a></li>
-						<li><a href="#attorneys">Attorneys</a></li>
-						<li><a href="blog.html">Articles</a></li>
+						<li><a href="index.php#clients">Our Clients</a></li>
+						<li><a href="index.php#whyus">OurExpertise</a></li>
+						<li><a href="index.php#ourpractice">Practice Area</a></li>
+						<li><a href="index.php#attorneys">Attorneys</a></li>
+						<li><a href="blog.php">Articles</a></li>
 						<li><a href="contact.html">Contact</a></li>
 					</ul>
 				</div>
